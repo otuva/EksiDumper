@@ -1,6 +1,7 @@
 import requests
 import re
 import datetime
+import os
 # import getopt
 # import sys
 from bs4 import BeautifulSoup
@@ -16,7 +17,13 @@ def starting_date(file_name) -> None:
     date_format = "%d-%m-%Y %H:%M:%S"
     now = datetime.datetime.now()
     date = now.strftime(date_format)
-    file = open("{}.txt".format(file_name), "w")
+    try:
+        file = open("dumps/{}.txt".format(file_name), "w")
+    except FileNotFoundError:
+        print("'dumps' directory is not found. creating...")
+        os.mkdir("dumps")
+        file = open("dumps/{}.txt".format(file_name), "w")
+
     file.write(date + "\n\n")
     file.close()
 
@@ -45,30 +52,28 @@ def extract_entries_from_page(username, page, _file) -> None:
         soup = BeautifulSoup(eksi_sozluk_response_text, features="lxml")
         entry_section = str((soup.find("section", {"id": "content-body"})))
 
-    extracted_entries = re.findall(r"#\d+", entry_section)
+    extracted_entries = re.findall(r"(?<=#)\d+", entry_section)
+    print("Page {} contains {} entries".format(page, len(extracted_entries)))
 
     for i in extracted_entries:
         _file.write(i + "\n")
 
 
-def main():
-    # user = sys.argv[1]
-    user = "nick"  # CHANGE THIS to sys.argv or callable from main driver code
+def main(user) -> None:
     starting_date(user)
 
-    file = open("{}.txt".format(user), "a")
+    file = open("dumps/{}.txt".format(user), "a")
+
     page_number = detect_pages(user)
 
-    print("Dumping started. User: {}, Total pages: {}".format(user, page_number))
+    print("User: {}, Total pages: {}".format(user, page_number))
 
     for current_page in range(1, page_number+1):
         extract_entries_from_page(user, current_page, file)
         print("Page {}/{} is done.".format(current_page, page_number))
 
-    print("Dumping completed successfully.")
     file.close()
 
 
 if __name__ == '__main__':
-    main()
-
+    main("example")
