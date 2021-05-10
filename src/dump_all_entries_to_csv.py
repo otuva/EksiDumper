@@ -3,14 +3,14 @@ import csv
 import os
 from bs4 import BeautifulSoup
 
-page_headers = {"User-Agent": "eksi-dumper"}
+page_headers = {"User-Agent": "eksisozluk-dumper"}
 
 field_names = ["entry_id", "title", "text", "date", "time", "edited_date", "edited_time"]
 
 entry_list = []
 
 
-def dict_to_csv(entries, username):
+def dict_to_csv(entries, username) -> None:
     try:
         try:
             open("dumps/{}.txt".format(username),"r")
@@ -28,7 +28,6 @@ def dict_to_csv(entries, username):
 
 
 def entry_to_dict(eid, title, text, date_time) -> dict:
-    # 08.05.2021 17:50 ~ 17:53    entry_date_time = entry_date_time.split(" ~ ")
     date_time = date_time.replace(" ~ ", " ").split()
     items = len(date_time)
     date, time, edited_date, edited_time = "", "", "", ""
@@ -68,7 +67,7 @@ def extract_entry(entry_id) -> dict:
     return entry_to_dict(entry_id, entry_title, entry_text, entry_date_time)
 
 
-def main(username):
+def main(username) -> None:
 
     file = open("dumps/{}.txt".format(username), "r")
     entry_ids = file.readlines()[2:]
