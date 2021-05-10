@@ -12,7 +12,7 @@ TR - Verilen kullaniciya ait entryleri csv dosyasina dump edin, arsivleyin. Data
 
 ---
 
-#EN
+# EN
 
 - [x] Can dump entries for a given user 
 - [ ] Can dump entries for a given topic
@@ -54,7 +54,7 @@ For example outputs, you can check [dumps directory](https://github.com/otuva/Ek
 
 
 
-#TR
+# TR
 
 - [x] Verilen kullanicinin tum entrylerini aktarabilir. 
 - [ ] Verilen basliktaki tum entryleri aktarabilir. 
