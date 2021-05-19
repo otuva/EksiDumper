@@ -1,4 +1,4 @@
-# EksiSozlukDumper
+# EksiDumper
 
 TR - Verilen kullaniciya ait entryleri csv dosyasina dump edin, arsivleyin. Data-set olusturmak ya da yedek almak icin ideal.
 
@@ -17,9 +17,9 @@ EN - Dump, archive all entries to a csv file for given username. Ideal for creat
 
 ---
 
-[Turkce](https://github.com/otuva/EksiSozlukDumper#tr)
+[Turkce](https://github.com/otuva/EksiDumper#tr)
 
-[English](https://github.com/otuva/EksiSozlukDumper#en)
+[English](https://github.com/otuva/EksiDumper#en)
 
 ---
 
@@ -50,7 +50,7 @@ ya da
 
 Bilgisayariniza ve internetinize bagli olmakla birlikte, script yaklasik olarak 120 entry/dakika hizinda calisir.
 
-Ornek ciktilar icin [dumps klasorune](https://github.com/otuva/EksiSozlukDumper/tree/main/dumps) ya da [resimlere](https://github.com/otuva/EksiSozlukDumper#imgs) bakabilirsiniz.
+Ornek ciktilar icin [dumps klasorune](https://github.com/otuva/EksiDumper/tree/main/dumps) ya da [resimlere](https://github.com/otuva/EksiDumper#imgs) bakabilirsiniz.
 
 ### Katkida bulunmak icin
 
@@ -89,7 +89,7 @@ or
 
 Depending on your computer and network, the script usually takes about 120 entries/minute.
 
-For example outputs, you can check [dumps directory](https://github.com/otuva/EksiSozlukDumper/tree/main/dumps) or [images](https://github.com/otuva/EksiSozlukDumper#imgs).
+For example outputs, you can check [dumps directory](https://github.com/otuva/EksiDumper/tree/main/dumps) or [images](https://github.com/otuva/EksiDumper#imgs).
 
 
 ### Contributing
@@ -105,8 +105,8 @@ For example outputs, you can check [dumps directory](https://github.com/otuva/Ek
 
 ## IMGs
 
-![1](https://github.com/otuva/EksiSozlukDumper/blob/main/img/1.png)
+![1](https://github.com/otuva/EksiDumper/blob/main/img/1.png)
 
-![2](https://github.com/otuva/EksiSozlukDumper/blob/main/img/2.png)
+![2](https://github.com/otuva/EksiDumper/blob/main/img/2.png)
 
-![3](https://github.com/otuva/EksiSozlukDumper/blob/main/img/3.png)
+![3](https://github.com/otuva/EksiDumper/blob/main/img/3.png)
