@@ -34,7 +34,7 @@ EN - Dump, archive all entries to a csv file for given username. Ideal for creat
 
 1- Gereklilikleri yukleyin. Size bagli olarak `pip` yerine `pip3` yazmak zorunda olabilirsiniz.
 
-    pip -r requirements.txt
+    pip install -r requirements.txt
 
 2- Komut satirindan scripti, ilk argumani kullanici adi olacak sekilde baslatin. Eger kullanici adi birden cok kelimeden olusuyorsa bosluk yerine `-` karakteri kullanin.
 
