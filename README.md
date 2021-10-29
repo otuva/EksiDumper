@@ -1,3 +1,7 @@
+# Bu repo artik kullanilmiyor. [YENI VERSIYON](https://github.com/otuva/EksiArchive)
+
+---
+
 # EksiDumper
 
 TR - Verilen kullaniciya ait entryleri csv dosyasina dump edin, arsivleyin. Data-set olusturmak ya da yedek almak icin ideal.
